@@ -8,14 +8,14 @@ class StringCalculator {
   
       // Checking for custom deliniter
       if (numbers.startsWith("//")) {
-        const delimiterEndIndex = numbers.indexOf("\n");
-        delimiter = numbers.substring(2, delimiterEndIndex);
-        numsString = numbers.substring(delimiterEndIndex + 1);
+        delimiter = numbers[2];
+        numsString = numbers.substring(5);
       }
   
       // Split numbers by the delimiter and new lines
       const numArray = numsString.split(new RegExp(`[${delimiter}\n]`));
       const nums = numArray.map(num => parseInt(num, 10));
+    
   
       // Check for negative numbers
       const negatives = nums.filter(num => num < 0);
