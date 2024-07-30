@@ -21,3 +21,7 @@ This project implements a `StringCalculator` class in JavaScript, which can pars
 
    ```bash
    npm install
+### Run
+    
+    node calculator.js
+    
